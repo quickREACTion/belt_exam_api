@@ -1,0 +1,26 @@
+<div id="container">
+  <h1>Prduct Details</h1>
+
+  <p class="deleteErrorMessage">{{eDeleteM}}</p>
+
+  <div class="FormMainLabelDiv">
+    <div>
+      <p class="FormMainLabelh3">Name</p>
+      <p class="FormMainLabelInputs">{{specificProduct.name}}</p>
+    </div>
+
+    <div>
+      <p class="FormMainLabelh3">Qty</p>
+      <p class="FormMainLabelInputs">{{specificProduct.quantity}}</p>
+    </div>
+
+    <div>
+      <p class="FormMainLabelh3">Price</p>
+      <p class="FormMainLabelInputs">{{specificProduct.price | currency:'$':false:'1.2-2'}}</p>
+    </div>
+  </div>
+
+  <p><button class="backButton" [routerLink]="['/']">Back</button><button *ngIf="specificProduct.quantity == 0" class="deleteButton" (click)="deleteSpecificProduct(specificProduct._id)">Delete</button></p>
+
+
+</div>

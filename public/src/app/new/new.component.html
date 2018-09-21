@@ -1,0 +1,34 @@
+<div id="container">
+  <h1>New Product</h1>
+
+  <form (submit)="createProduct()">
+    <div class="FormMainLabelDiv">
+    <div class="errorMessagediv">
+      <h3 class="FormMainLabelh3">Name</h3>
+      <p *ngIf="eName">{{eName.message}}</p>
+      <p *ngIf="name.pristine">Name is required</p>
+      <p *ngIf="name.invalid && name.dirty">Name requires a minimum of 3 characters!</p>
+      <input class="FormMainLabelInputs" type="text" name="name" [(ngModel)]="newProducts.name" required minlength="3" maxlength="255" #name="ngModel" autocomplete="off">
+    </div>
+    <div class="errorMessagediv">
+      <h3 class="FormMainLabelh3">Qty</h3>
+      <p *ngIf="eQuantity">{{eQuantity.message}}</p>
+      <p *ngIf="quantity.pristine">Quantity is required</p>
+      <p *ngIf="quantity.invalid && quantity.dirty">Quantity requires a minimum of 0 or greater</p>
+      <input class="FormMainLabelInputs" type="number" name="quantity" [(ngModel)]="newProducts.quantity" required min="0" #quantity="ngModel">
+    </div>
+    <div class="errorMessagediv">
+      <h3 class="FormMainLabelh3">Price</h3>
+      <p *ngIf="ePrice">{{ePrice.message}}</p>
+      <p *ngIf="price.pristine">Price is required</p>
+      <p *ngIf="price.invalid && price.dirty">Price requires a minimum of 0 or greater!</p>
+      <input class="FormMainLabelInputs" type="number" name="price" [(ngModel)]="newProducts.price" required min="0" #price="ngModel">
+    </div>
+    </div>
+    <button [routerLink]="['/']">BACK</button>
+    <input class="CreateButton" *ngIf="name.valid && quantity.valid && price.valid" type="submit" name="submit" value="CREATE">
+
+  </form>
+
+
+</div>

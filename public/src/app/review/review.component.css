@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cfb {clear: both;}
+
+h1 {
+    margin-bottom: 5%;
+    margin-top: 1%;
+}
+
+.errorMessagediv p {
+    color: red
+}
+
+.FormMainLabelDiv {
+    float: left;
+    width: 100%;
+}
+
+.FormMainLabelh3 {
+    float: left;
+    width: 20%;
+}
+
+
+.FormMainLabelInputs {
+    width: 30%;
+    margin-bottom: 2%;
+}
+
+.backButton {
+    background-color: #e1d5e7;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 1em 2em;
+    margin-left: 20%;
+    cursor: pointer;
+}
+
+.deleteButton {
+    background-color: #ff0000;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 1em 2em;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.deleteErrorMessage {
+    color: purple;
+    margin-bottom: 5%;
+}

@@ -1,0 +1,31 @@
+<div id="container">
+    <h1>Update Product</h1>
+  
+    <form (submit)="updateProduct(specificProduct._id)">
+      <div class="FormMainLabelDiv">
+        <div class="errorMessagediv">
+          <h3 class="FormMainLabelh3">Name</h3>
+          <p *ngIf="eName">{{eName.message}}</p>
+          <p *ngIf="name.invalid && name.dirty">Name requires a minimum of 3 characters!</p>
+          <input class="FormMainLabelInputs" type="text" name="name" [(ngModel)]="specificProduct.name" required minlength="3" #name="ngModel">
+        </div>
+        <div class="errorMessagediv">
+          <h3 class="FormMainLabelh3">Qty</h3>
+          <p *ngIf="eQuantity">{{eQuantity.message}}</p>
+          <p *ngIf="quantity.invalid && quantity.dirty">Quantity requires a minimum of 0 or greater</p>
+          <input class="FormMainLabelInputs" type="number" name="quantity" [(ngModel)]="specificProduct.quantity" required min="0" #quantity="ngModel">
+        </div>
+        <div class="errorMessagediv">
+          <h3 class="FormMainLabelh3">Price</h3>
+          <p *ngIf="ePrice">{{ePrice.message}}</p>
+          <p *ngIf="price.invalid && price.dirty">Price requires a minimum of 0 or greater!</p>
+          <input class="FormMainLabelInputs" type="number" name="price" [(ngModel)]="specificProduct.price" required min="0" #price="ngModel">
+        </div>
+      </div>
+      <input class="CreateButton" *ngIf="name.valid && quantity.valid && price.valid" type="submit" name="submit" value="UPDATE">
+    </form>
+    <button class="resetButton" (click)="reset(specificProduct._id)">RESET</button>
+    
+    <div class="cfb"></div>
+  
+  </div>

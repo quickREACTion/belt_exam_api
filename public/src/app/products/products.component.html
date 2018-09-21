@@ -1,0 +1,33 @@
+<div id="container">
+  <div class="headerMainDivProduct">
+    <h1>Product List</h1>
+  </div>
+
+  <div class="headerMainDivAdd">
+    <button class="headerAddButton" [routerLink]="['products/new']">Add New Product</button>
+  </div>
+  <div class="cfb"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of products">
+        <td>{{x._id}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.quantity}}</td>
+        <td>{{x.price | currency:'$':false:'1.2-2'}}</td>
+        <td style="text-align: center;"><button [routerLink]="['products/' + x._id + '/edit']" class="editButton">Edit</button><button [routerLink]="['products/' + x._id]" class="detailsButton">Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cfb"></div>
+
+</div>

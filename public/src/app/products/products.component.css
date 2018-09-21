@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 1008px;
+    margin: 2% auto;
+}
+
+.cfb {clear: both;}
+
+.headerMainDivProduct {
+    float: left;
+    width: 50%;
+    margin-bottom: 5%;
+}
+
+.headerMainDivAdd {
+    float: right;
+}
+
+.headerAddButton {
+    background: linear-gradient(to bottom, #bfd2c3, #536570);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer !important;   
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    width: 100%;
+}
+
+table thead tr {
+    background-color: lightgray;
+    border-bottom: 2px solid black;
+}
+
+table thead tr th {
+    padding: 1em;
+    text-align: left;
+    border-right: 2px solid black;
+}
+
+table tbody tr {
+    border-right: 2px solid black;
+}
+
+table tbody tr td {
+    border-right: 2px solid black;
+    padding: 1em !important;
+}
+
+.editButton {
+    background: linear-gradient(to bottom, #e5d2be, #536570);
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.detailsButton {
+    background: linear-gradient(to bottom, #d8b9ba, #536570);
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
